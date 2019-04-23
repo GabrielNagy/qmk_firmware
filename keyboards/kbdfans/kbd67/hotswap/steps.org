@@ -1,0 +1,9 @@
+* Steps to flash firmware
+  1. Use [[https://config.qmk.fm/#/kbdfans/kbd67/hotswap/LAYOUT][QMK Configurator]] to generate keymap
+     - Upload existing keymap.json if applicable
+  2. Download keymap and place it under =keymaps/keymap/=
+  3. Compile downloaded keymap (not applicable if already got hex file)
+     : make kbd67/hotswap:keymap:dfu
+  4. Put keyboard in DFU mode (unplug then plug in while holding ESC, it should be detected and disconnected shortly after)
+  5. Firmware should automatically flash (previous command checks every 5 seconds for devices)
+  6. Profit!
